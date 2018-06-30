@@ -19,6 +19,7 @@ import { DemoPipe } from "./src/pipes/demo.pipe";
 //   .pipe(DemoPipe)
 //   .option(TOKEN_TEST, valueTest)
 //   .option(ENV_MODE, { mode: "development", trace: true })
+//   .option(DEPLOY_MODE, { port: 3000 })
 //   .option(JSON_RESULT_OPTIONS, { staticType: true, resolver: JsonResultResolvers.decamelize })
 //   .option(TPL_RENDER_OPTIONS, { root: path.resolve(__dirname, "./src/views"), extensions: "ejs", render: Renders.ejs })
 //   .start(((configs) => {
@@ -39,6 +40,7 @@ import { DemoPipe } from "./src/pipes/demo.pipe";
   options: [
     { token: TOKEN_TEST, value: valueTest },
     { token: ENV_MODE, value: { trace: true } },
+    { token: DEPLOY_MODE, value: { port: 3200 } },
     [JSON_RESULT_OPTIONS, { staticType: true, resolver: JsonResultResolvers.decamelize }]
   ]
 })

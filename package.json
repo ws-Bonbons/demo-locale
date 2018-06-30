@@ -1,0 +1,28 @@
+{
+  "name": "demo-locale",
+  "version": "1.0.0",
+  "description": "@bonbons/demo-locale",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ws-Bonbons/demo-locale.git"
+  },
+  "author": "bws",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ws-Bonbons/demo-locale/issues"
+  },
+  "homepage": "https://github.com/ws-Bonbons/demo-locale#readme",
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/node": "^10.3.2",
+    "ts-node": "^6.1.1",
+    "tsconfig-paths": "^3.4.0",
+    "typescript": "^2.9.1"
+  }
+}

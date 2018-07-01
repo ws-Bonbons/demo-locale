@@ -28,8 +28,13 @@ export class TestController extends BaseController {
   @Pipes([WrappedPipe({ name: "a", value: 2 }), DemoPipe, ArrayPipe([123, "woshinidie"]), fucker, fucker], false)
   @Middlewares([middleware01()])
   public index(abc: string, def: string, id: number, name: string, fuck: string) {
-    this.logger.debug("TestController", "index");
+    this.logger.debug("Test-Controller", "index", "prepare render tpl view.");
     this.views.data = {
+      getNumber: this.context.get("id", Number),
+      getNumberType: typeof this.context.get("id", Number),
+      getString: this.context.get("name"),
+      getBoolean: this.context.get("fuck", Boolean),
+      getMistake: this.context.get("abc", Number),
       query: this.context.request.querystring,
       moreMessage: " woshinidie " + fuck + " -- " + this.imp.show(),
       checks: {
@@ -67,7 +72,7 @@ export class TestController extends BaseController {
   @Method("POST")
   @Route("/postJSon")
   public SendMessage(@FromBody("application/javascript") params) {
-    this.logger.debug("TestController", "SendMessage");
+    this.logger.debug("Test-Controller", "SendMessage", "test form parse for json.");
     return this.toJSON(params);
   }
 
@@ -75,7 +80,7 @@ export class TestController extends BaseController {
   @Route("/postForm")
   @Pipes([], false)
   public SendFormMessage(@FromForm({ formLimit: "50kb", }) params) {
-    this.logger.debug("TestController", "SendFormMessage");
+    this.logger.debug("Test-Controller", "SendFormMessage", "test form parse for url-encoded.");
     return this.toJSON(params);
   }
 

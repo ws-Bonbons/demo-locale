@@ -41,7 +41,8 @@ import { DemoPipe } from "./src/pipes/demo.pipe";
     { token: TOKEN_TEST, value: valueTest },
     { token: ENV_MODE, value: { trace: true } },
     { token: DEPLOY_MODE, value: { port: 3200 } },
-    [JSON_RESULT_OPTIONS, { staticType: true, resolver: JsonResultResolvers.decamelize }]
+    { token: JSON_RESULT_OPTIONS, value: { staticType: true, resolver: JsonResultResolvers.decamelize } },
+    { token: TPL_RENDER_OPTIONS, value: { root: path.resolve(__dirname, "./src/views"), extensions: "ejs", render: Renders.ejs } }
   ]
 })
 class App extends BaseApp {

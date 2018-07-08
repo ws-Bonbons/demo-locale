@@ -1,6 +1,6 @@
 import { default as path } from "path";
-import { Bonbons, BaseApp, BonbonsApp } from "@bonbons/core";
-import { JSON_RESULT_OPTIONS, ENV_MODE, DEPLOY_MODE } from "@bonbons/di";
+import { Bonbons, BaseApp, BonbonsApp, BonbonsScope as bonbons } from "@bonbons/core";
+// import { JSON_RESULT_OPTIONS, ENV_MODE, DEPLOY_MODE } from "@bonbons/di";
 import { JsonResultResolvers } from "@bonbons/controllers";
 import { TPL_RENDER_OPTIONS, Renders } from "@bonbons/plugins";
 import { TestService } from "./src/service/test";
@@ -39,16 +39,16 @@ import { DemoPipe } from "./src/pipes/demo.pipe";
   pipes: [DemoPipe],
   options: [
     { token: TOKEN_TEST, value: valueTest },
-    { token: ENV_MODE, value: { trace: true } },
-    { token: DEPLOY_MODE, value: { port: 3200 } },
-    { token: JSON_RESULT_OPTIONS, value: { staticType: true, resolver: JsonResultResolvers.decamelize } },
+    { token: bonbons.ENV_MODE, value: { trace: true } },
+    { token: bonbons.DEPLOY_MODE, value: { port: 3200 } },
+    { token: bonbons.JSON_RESULT_OPTIONS, value: { staticType: true, resolver: JsonResultResolvers.decamelize } },
     { token: TPL_RENDER_OPTIONS, value: { root: path.resolve(__dirname, "./src/views"), extensions: "ejs", render: Renders.ejs } }
   ]
 })
 class App extends BaseApp {
 
   start(): void {
-    const { port } = this.config.get(DEPLOY_MODE);
+    const { port } = this.config.get(bonbons.DEPLOY_MODE);
     this.logger.debug(`app is running on port ${port || 3000}`);
   }
 

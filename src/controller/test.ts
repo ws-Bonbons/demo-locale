@@ -1,12 +1,21 @@
+import {
+  BaseController,
+  Controller,
+  Pipes,
+  Method,
+  Route,
+  Middlewares,
+  FromBody,
+  FromForm,
+  InjectService,
+  GlobalLogger
+} from "@bonbons/core";
 import { TestService } from "../service/test";
 import { ABC } from "../service/imp";
 import { DemoPipe } from "../pipes/demo.pipe";
 import { WrappedPipe } from "../pipes/wrap.pipe";
 import { ArrayPipe } from "../pipes/array.pipe";
 import { middleware01 } from "../middlewares/md01";
-import { Controller, Pipes, Method, Route, Middlewares, FromBody, FromForm } from "@bonbons/decorators";
-import { InjectService, GlobalLogger } from "@bonbons/plugins";
-import { BaseController } from "@bonbons/controllers";
 
 const fucker = ArrayPipe([666666, "mother fucker"]);
 

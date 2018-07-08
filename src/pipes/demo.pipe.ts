@@ -1,6 +1,4 @@
-import { PipeMiddleware } from "@bonbons/pipes";
-import { GlobalLogger } from "@bonbons/plugins";
-import { Pipe } from "@bonbons/decorators";
+import { Pipe, PipeMiddleware, PipeOnInit, GlobalLogger, PipeFactory } from "@bonbons/core";
 import { TestService } from "../service/test";
 
 @Pipe()

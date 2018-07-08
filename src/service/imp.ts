@@ -1,6 +1,6 @@
+import { Injectable, GlobalLogger } from "@bonbons/core";
 import { TestService } from "./test";
-import { GlobalLogger } from "@bonbons/plugins";
-import { Injectable } from "@bonbons/decorators";
+
 
 export abstract class ABC {
   abstract show(): string;

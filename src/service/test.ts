@@ -1,5 +1,4 @@
-import { Injectable } from "@bonbons/decorators";
-import { GlobalLogger } from "@bonbons/plugins";
+import { Injectable, GlobalLogger } from "@bonbons/core";
 
 @Injectable()
 export class TestService {

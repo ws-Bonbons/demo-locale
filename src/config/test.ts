@@ -1,4 +1,4 @@
-import { createToken } from "@bonbons/di";
+import { createToken } from "@bonbons/core";
 
 export interface IA {
   a: string;

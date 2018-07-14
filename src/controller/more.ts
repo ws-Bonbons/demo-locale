@@ -1,4 +1,4 @@
-import { Controller, BaseController, GlobalLogger, Method, JsonResult, Route, FromBody } from "@bonbons/core";
+import { Controller, BaseController, Logger, Method, JsonResult, Route, FromBody } from "@bonbons/core";
 import { TestService } from "../service/test";
 import { ABC } from "../service/imp";
 
@@ -6,7 +6,7 @@ import { ABC } from "../service/imp";
 export class MoreController extends BaseController {
 
   constructor(
-    private logger: GlobalLogger,
+    private logger: Logger,
     private test: TestService,
     private imp: ABC) {
     super();

@@ -40,6 +40,7 @@
     "declaration": false, /* Generates corresponding '.d.ts' file. */
     "sourceMap": true, /* Generates corresponding '.map' file. */
     "strict": true, /* Enable all strict type-checking options. */
+    "strictNullChecks": false,
     "noImplicitAny": false, /* Raise error on expressions and declarations with an implied 'any' type. */
     "strictPropertyInitialization": false, /* Enable strict checking of property initialization in classes. */
     "moduleResolution": "node", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */

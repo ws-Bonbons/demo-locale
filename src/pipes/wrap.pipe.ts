@@ -1,4 +1,4 @@
-import { Pipe, PipeMiddleware, PipeOnInit, GlobalLogger, PipeFactory } from "@bonbons/core";
+import { Pipe, PipeMiddleware, PipeOnInit, Logger, PipeFactory } from "@bonbons/core";
 import { TestService } from "../service/test";
 
 interface PipeDate {
@@ -9,7 +9,7 @@ interface PipeDate {
 @Pipe()
 class PIpeClass2 extends PipeMiddleware<PipeDate> implements PipeOnInit {
 
-  constructor(private test: TestService, private logger: GlobalLogger) {
+  constructor(private test: TestService, private logger: Logger) {
     super();
     // console.log(this.test);
   }

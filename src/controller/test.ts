@@ -8,7 +8,7 @@ import {
   FromBody,
   FromForm,
   InjectService,
-  GlobalLogger
+  Logger
 } from "@bonbons/core";
 import { TestService } from "../service/test";
 import { ABC } from "../service/imp";
@@ -25,7 +25,7 @@ export class TestController extends BaseController {
 
   constructor(
     private injector: InjectService,
-    private logger: GlobalLogger,
+    private logger: Logger,
     private test: TestService,
     private imp: ABC) {
     super();

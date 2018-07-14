@@ -1,10 +1,10 @@
-import { Pipe, PipeMiddleware, PipeOnInit, GlobalLogger, PipeFactory } from "@bonbons/core";
+import { Pipe, PipeMiddleware, PipeOnInit, Logger, PipeFactory } from "@bonbons/core";
 import { TestService } from "../service/test";
 
 @Pipe()
 export class DemoPipe extends PipeMiddleware {
 
-  constructor(private test: TestService, private logger: GlobalLogger) {
+  constructor(private test: TestService, private logger: Logger) {
     super();
   }
 

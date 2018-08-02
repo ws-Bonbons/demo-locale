@@ -47,8 +47,6 @@ export class TestController extends BaseController {
       query: this.context.request.querystring,
       moreMessage: " woshinidie " + fuck + " -- " + this.imp.show(),
       checks: {
-        test: this.test,
-        imp: this.imp,
         msg: { abc, def, id, name },
         typeChecks: {
           abc: typeof abc,
@@ -75,6 +73,23 @@ export class TestController extends BaseController {
     //     }
     //   }
     // });
+  }
+
+  @Method("GET")
+  @Route("/get/message")
+  public GETMessage() {
+    return this.toJSON({
+      code: 0,
+      message: "success",
+      data: {
+        newData: "123456",
+        oldData: "123456",
+        dataArray: [
+          { dataStatus: 200, errorMessage: null },
+          { dataStatus: 500, errorMessage: "server error" },
+        ]
+      }
+    });
   }
 
   // @POST

@@ -10,30 +10,6 @@
     "paths": {
       "@bonbons/core": [
         "./../core/index.ts"
-      ],
-      "@bonbons/controllers": [
-        "./../controllers/index.ts"
-      ],
-      "@bonbons/decorators": [
-        "./../decorators/index.ts"
-      ],
-      "@bonbons/plugins": [
-        "./../plugins/index.ts"
-      ],
-      "@bonbons/pipes": [
-        "./../pipes/index.ts"
-      ],
-      "@bonbons/di": [
-        "./../di/index.ts"
-      ],
-      "@bonbons/options": [
-        "./../options/index.ts"
-      ],
-      "@bonbons/utils": [
-        "./../utils/index.ts"
-      ],
-      "@bonbons/contracts": [
-        "./../contracts/index.ts"
       ]
     }, /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     "allowJs": true, /* Allow javascript files to be compiled. */

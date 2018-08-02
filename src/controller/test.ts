@@ -34,18 +34,18 @@ export class TestController extends BaseController {
   // @GET
   @Method("GET")
   @Route("/index/:abc/:def?{id}&{name}&{fuck}")
-  @Pipes([WrappedPipe({ name: "a", value: 2 }), DemoPipe, ArrayPipe([123, "woshinidie"]), fucker, fucker], false)
-  @Middlewares([middleware01()])
+  // @Pipes([WrappedPipe({ name: "a", value: 2 }), DemoPipe, ArrayPipe([123, "woshinidie"]), fucker, fucker], false)
+  // @Middlewares([middleware01()])
   public index(abc: string, def: string, id: number, name: string, fuck: string) {
     this.logger.debug("Test-Controller", "index", "prepare render tpl view.");
     this.views.data = {
-      getNumber: this.context.get("id", Number),
-      getNumberType: typeof this.context.get("id", Number),
-      getString: this.context.get("name"),
-      getBoolean: this.context.get("fuck", Boolean),
-      getMistake: this.context.get("abc", Number),
-      query: this.context.request.querystring,
-      moreMessage: " woshinidie " + fuck + " -- " + this.imp.show(),
+      // getNumber: this.context.get("id", Number),
+      // getNumberType: typeof this.context.get("id", Number),
+      // getString: this.context.get("name"),
+      // getBoolean: this.context.get("fuck", Boolean),
+      // getMistake: this.context.get("abc", Number),
+      // query: this.context.request.querystring,
+      // moreMessage: " woshinidie " + fuck + " -- " + this.imp.show(),
       checks: {
         msg: { abc, def, id, name },
         typeChecks: {

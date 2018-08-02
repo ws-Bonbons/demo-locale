@@ -30,7 +30,8 @@ Bonbons.New
   .option(JSON_RESULT_OPTIONS, { staticType: true, resolver: JsonResultResolvers.decamelize })
   .option(TPL_RENDER_OPTIONS, { root: path.resolve(__dirname, "./src/views"), extensions: "ejs", render: Renders.ejs })
   .start(((configs) => {
-    console.log(configs.get(TPL_RENDER_OPTIONS));
+    // console.log(configs.get(TPL_RENDER_OPTIONS));
+    console.log("\nhello world!");
   }));
 
 // @BonbonsApp({

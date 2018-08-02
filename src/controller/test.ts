@@ -36,7 +36,7 @@ export class TestController extends BaseController {
   @Route("/index/:abc/:def?{id}&{name}&{fuck}")
   // @Pipes([WrappedPipe({ name: "a", value: 2 }), DemoPipe, ArrayPipe([123, "woshinidie"]), fucker, fucker], false)
   // @Middlewares([middleware01()])
-  public index(abc: string, def: string, id: number, name: string, fuck: string) {
+  public index(abc: string, def: string, id: number, name: string, fuck: boolean) {
     this.logger.debug("Test-Controller", "index", "prepare render tpl view.");
     this.views.data = {
       // getNumber: this.context.get("id", Number),

@@ -78,6 +78,7 @@ export class TestController extends BaseController {
   @Method("GET")
   @Route("/get/message")
   public GETMessage() {
+    console.log("come in to controller method");
     return this.toJSON({
       code: 0,
       message: "success",

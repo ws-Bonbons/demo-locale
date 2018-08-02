@@ -12,10 +12,9 @@ class PIpeClass3 extends PipeMiddleware<[number, string]> implements PipeOnInit 
     // console.log(this.params);
   }
 
-  async process(next: () => Promise<any>) {
+  async process() {
     this.logger.debug("process in pipe [ ArrayPipe ]");
     console.log(this.params);
-    await next();
   }
 
 }

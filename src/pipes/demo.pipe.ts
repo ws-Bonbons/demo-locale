@@ -10,14 +10,15 @@ export class DemoPipe extends PipeMiddleware {
 
   constructor(private test: TestService, private abc: ABC, private logger: Logger) {
     super();
+    console.log("======>create demo pipeline");
   }
 
-  async process(next: () => Promise<any>) {
+  async process() {
+    console.log("start demo pipeline");
     this.logger.debug(`process in pipe [ DemoPipe : ${this.id} ]`);
     this.logger.debug(`check singleton test service id : [${this.test.id}]`);
     this.logger.debug(`check scoped abc service id : [${this.abc.show()}]`);
-    console.log(this.params);
-    await next();
+    console.log("======>leave demo pipeline");
   }
 
 }

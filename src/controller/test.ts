@@ -47,12 +47,13 @@ export class TestController extends BaseController {
       // query: this.context.request.querystring,
       // moreMessage: " woshinidie " + fuck + " -- " + this.imp.show(),
       checks: {
-        msg: { abc, def, id, name },
+        msg: { abc, def, id, name, fuck },
         typeChecks: {
           abc: typeof abc,
           def: typeof def,
           id: typeof id,
-          name: typeof name
+          name: typeof name,
+          fuck: typeof fuck
         }
       }
     };

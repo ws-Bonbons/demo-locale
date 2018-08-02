@@ -16,11 +16,13 @@ import { valueTest, TOKEN_TEST } from "./src/config/test";
 import { TestController } from "./src/controller/test";
 import { MoreController } from "./src/controller/more";
 import { DemoPipe } from "./src/pipes/demo.pipe";
+import { AlwaysNewService } from "src/service/new";
 
 Bonbons.New
   .scoped(ImplementService)
   .scoped(ABC, ImplementService)
   .singleton(TestService)
+  .renew(AlwaysNewService)
   .controller(TestController)
   .controller(MoreController)
   .pipe(DemoPipe)

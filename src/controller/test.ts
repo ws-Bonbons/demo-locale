@@ -49,11 +49,11 @@ export class TestController extends BaseController {
       checks: {
         msg: { abc, def, id, name, fuck },
         typeChecks: {
-          abc: typeof abc,
-          def: typeof def,
-          id: typeof id,
-          name: typeof name,
-          fuck: typeof fuck
+          abc: typeof abc === "string",
+          def: typeof def === "string",
+          id: typeof id === "number",
+          name: typeof name === "string",
+          fuck: typeof fuck === "boolean"
         }
       }
     };

@@ -17,15 +17,21 @@ import { TestController } from "./src/controller/test";
 import { MoreController } from "./src/controller/more";
 import { DemoPipe } from "./src/pipes/demo.pipe";
 import { AlwaysNewService } from "src/service/new";
+import { BusinessController } from "./src/controller/business";
+import { StaffService } from "src/service/business/staff.service";
+import { VipService } from "src/service/business/vip.service";
 
 Bonbons.New
   .scoped(ImplementService)
   .scoped(ABC, ImplementService)
   .singleton(TestService)
+  .singleton(StaffService)
+  .singleton(VipService)
   .renew(AlwaysNewService)
   .controller(TestController)
   .controller(MoreController)
-  .pipe(DemoPipe)
+  .controller(BusinessController)
+  // .pipe(DemoPipe)
   .option(TOKEN_TEST, valueTest)
   .option(ENV_MODE, { mode: "development", trace: true })
   .option(DEPLOY_MODE, { port: 3000 })

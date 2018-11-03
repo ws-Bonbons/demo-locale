@@ -17,6 +17,8 @@ export class DemoPipe extends PipeMiddleware {
 
   async process() {
     console.log("enter demo pipeline");
+    // console.log(this.injector);
+    // console.log(this.abc);
     this.logger.debug(`process in pipe [ DemoPipe : ${setColor("green", this.id)} ]`);
     this.logger.debug(`check singleton test service id : [${setColor("cyan", this.test.id)}]`);
     this.logger.debug(`check scoped abc service id : [${setColor("red", this.abc.show())}]`);

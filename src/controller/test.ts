@@ -78,7 +78,10 @@ export class TestController extends BaseController {
 
   @Method("GET")
   @Route("/get/message")
+  // @Pipes([], false)
   public GETMessage() {
+    // console.log(this.injector);
+    // console.log(this.imp);
     console.log("come in to controller method");
     return this.toJSON({
       code: 0,
